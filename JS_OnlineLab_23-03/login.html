@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <title>Login Form</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Login Form</legend>
+            <table>
+                <tr>
+                    <td><label for="username">UserName: </label></td>
+                    <td><input type="text" id="username" name="username" value=""/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><p id="uTest" style="font-size: smaller;font-style: italic;"></p></td>
+                </tr>
+                <tr>
+                    <td><label for="Password">Password: </label></td>
+                    <td><input type="password" id="password" name="password" value=""/></td>
+                    <td> <input type="button" id="showPass" name="showPass"value="Show Password" onclick="showPassword()"></td>
+                </tr>
+                    <tr>
+                        <td></td>
+                        <td><p id="PTest" style="font-size: smaller;font-style: italic;"></p></td>
+                    </tr>
+                </tr>
+            </table>
+            <input type="button" id="button" name="button" value="Login" onclick="check()"/>
+        </fieldset>
+    </form>
+    <script>
+        function check() {
+            let uName = document.getElementById('username').value;
+            let Pass = document.getElementById('password').value;
+            if(uName===''){
+                document.getElementById('uTest').innerHTML="fill the username"
+                document.getElementById('uTest').style.color="red"
+            }
+            else document.getElementById('uTest').innerHTML=""
+            if(Pass===''){
+                document.getElementById('PTest').innerHTML="Fill the Password".toLowerCase()
+                document.getElementById('PTest').style.color="Red"
+            }
+            else document.getElementById('PTest').innerHTML="" 
+        }
+        function showPassword(){
+            let temp=document.getElementById('password')
+            if(document.getElementById('password').type==="password"){
+                temp.type="text"
+                document.getElementById('showPass').value="Hide Password"
+            }
+            else {
+                temp.type="Password"
+                document.getElementById('showPass').value="Show Password"
+            }
+        }
+        
+    </script>
+</body>
+</html>
