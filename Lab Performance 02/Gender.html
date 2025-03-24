@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gender Validation</title>
+    </head>
+    <body>
+      <form>
+        <fieldset>
+            <legend>Gender</legend>
+        <table>
+            <tr>
+                <td><input type="radio" id="male" name="Gender" value="male"><label for="male">Male</label>
+                    <input type="radio" id="female" name="Gender" value="female"><label for="female">Female</label>
+                    <input type="radio" id="other" name="Gender" value="other"><label for="female">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="warn"></p>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <input type="button"id="Button"name="Button"value="Submit" onclick="genChck()">
+      </form>
+      <script>
+        function genChck(){
+           let chck=document.getElementsByName('Gender')
+           let confirm=false
+           for (let i=0;i<chck.length;i++)
+           {
+            if(chck[i].checked){
+                confirm=true;
+                break;
+            }
+           }
+           if(confirm==false)
+           {
+            document.getElementById('warn').innerHTML="Select one"
+            document.getElementById('warn').style.color="Red"
+           }
+           else {
+            document.getElementById('warn').innerHTML=""
+           }
+        }
+
+      </script>
+    </body>
+</html>
