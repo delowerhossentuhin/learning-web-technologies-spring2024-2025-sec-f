@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Name Validation</title>
+    </head>
+    <body>
+      <form>
+        <table>
+            <tr>
+                <td><label for="Name">Name</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="Name" name="Name"value=""></td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="warn"></p>
+                </td>
+            </tr>
+            <tr><td><input type="button"id="nameButton"name="nameButton"value="Submit" onclick="nameCheck()"></td></tr>
+        </table>
+      </form>
+      <script>
+        function nameCheck() {
+            let x = document.getElementById('warn');
+            let getName = document.getElementById('Name').value
+            
+            if (getName === "") {
+                x.innerHTML = "Name field is Empty";
+                x.style.color = "Red";
+            }
+            let words = getName.split(/\s+/); 
+            if (words.length < 2) {
+                x.innerHTML = "Invalid Name! It must contain at least two words.";
+                x.style.color = "Red";
+            }
+            if (!(getName[0] >= 'A' && getName[0] <= 'Z') && !(getName[0] >= 'a' && getName[0] <= 'z')) {
+                x.innerHTML = "Invalid Name! It must start with a letter.";
+                x.style.color = "Red";
+            }
+            for (let i = 0; i < getName.length; i++) {
+                let char = getName[i];
+                if (!((char >= 'A' && char <= 'Z') || 
+                (char >= 'a' && char <= 'z') || 
+                char === '.' || char === '-' || char === ' ')) {
+                x.innerHTML = "Invalid Name! Only letters, dots, and dashes are allowed.";
+                x.style.color = "Red";
+            }
+            x.innerHTML=""
+            
+    }
+
+}
+      </script>
+    </body>
+</html>
