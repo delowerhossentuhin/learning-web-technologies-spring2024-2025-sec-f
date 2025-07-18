@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rotating 3D Tech Logo Cloud</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+    }
+    .scene {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: spin 12s linear infinite;
+      perspective: 800px;
+    }
+    .logo {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      border-radius: 8px;
+      top: 50%;
+      left: 50%;
+      transform-origin: center center;
+      transform-style: preserve-3d;
+      transform: translate(-50%, -50%) translateZ(150px);
+      filter: drop-shadow(0 0 5px rgba(255 255 255 / 0.6));
+      background: white;
+      padding: 4px;
+    }
+
+    /* Individual rotation around Y axis for each logo */
+    .logo:nth-child(2) { transform: rotateY(0deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(3) { transform: rotateY(20deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(4) { transform: rotateY(40deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(5) { transform: rotateY(60deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(6) { transform: rotateY(80deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(7) { transform: rotateY(100deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(8) { transform: rotateY(120deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(9) { transform: rotateY(140deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(10) { transform: rotateY(160deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(11) { transform: rotateY(180deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(12) { transform: rotateY(200deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(13) { transform: rotateY(220deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(14) { transform: rotateY(240deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(15) { transform: rotateY(260deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(16) { transform: rotateY(280deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(17) { transform: rotateY(300deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(18) { transform: rotateY(320deg) translateZ(150px) translate(-50%, -50%); }
+    .logo:nth-child(19) { transform: rotateY(340deg) translateZ(150px) translate(-50%, -50%); }
+
+    @keyframes spin {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++" />
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" />
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="C#" />
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" />
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML" />
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS" />
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JS" />
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP" />
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="Pandas" />
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" />
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" />
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="Matplotlib" />
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/r/r-original.svg" alt="R" />
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" />
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" alt="Oracle" />
+    <img class="logo" src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="MSSQL" />
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg" alt="LaTeX" />
+    <img class="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" />
+  </div>
+</body>
+</html>
